@@ -1,0 +1,33 @@
+﻿<Window x:Class="Finalwork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:Finalwork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="400">
+    <Grid>
+        <Image gif:ImageBehavior.AnimatedSource="4星抽卡.gif" Height="200" Margin="0,0,0,400"></Image>
+        <TextBlock Margin="30,400,250,150" VerticalAlignment="Center" FontSize="36" Foreground="#FF0BDCDC" >4星卡:</TextBlock>
+        <TextBlock Margin="30,460,250,90" VerticalAlignment="Center" FontSize="36" Foreground="#FFFDBA07" >3星卡:</TextBlock>
+        <TextBlock Margin="30,520,250,30" VerticalAlignment="Center" FontSize="36" Foreground="#FFFF00F3" >2星卡:</TextBlock>
+        <TextBlock x:Name="FourStarN" Margin="160,400,150,150" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">0</TextBlock>
+        <TextBlock x:Name="ThreeStarN" Margin="160,460,150,90" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">0</TextBlock>
+        <TextBlock x:Name="TwoStarN" Margin="160,520,150,30" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">0</TextBlock>
+        <TextBlock Margin="250,400,50,150" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">張</TextBlock>
+        <TextBlock Margin="250,460,50,90" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">張</TextBlock>
+        <TextBlock Margin="250,520,50,30" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36">張</TextBlock>
+        <Button x:Name="OneCard" Margin="30,250,280,310" FontSize="24" Click="OneCard_Click">單抽</Button>
+        <Button x:Name="TenCard" Margin="140,250,160,310" FontSize="24" Click="TenCard_Click">十連抽</Button>
+        <Button x:Name="ManyCard" Margin="260,250,30,310" FontSize="24" Click="ManyCard_Click">狂抽</Button>
+        <Slider Minimum="0" Maximum="10" Margin="260,320,30,250"
+            TickFrequency="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True"
+            x:Name="MySlider" ValueChanged="MySlider_ValueChanged"></Slider>
+        <TextBlock Margin="260,350,30,220" HorizontalAlignment="Center" x:Name="ValueTxt" FontSize="20">0</TextBlock>
+        <TextBlock Margin="30,320,320,230" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center">共</TextBlock>
+        <TextBlock Margin="80,320,220,230" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="TotalCN">0</TextBlock>
+        <TextBlock Margin="130,320,130,230" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center">抽</TextBlock>
+    </Grid>
+
+</Window>
